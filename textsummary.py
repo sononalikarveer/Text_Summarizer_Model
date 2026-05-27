@@ -2,11 +2,16 @@ import torch
 import gradio as gr
 from transformers import pipeline
 
+
+model_id="ClarityClips/ClarityQwen2Summarizer"
+
 pipe = pipeline(
     "text-generation", 
-    model="ClarityClips/ClarityQwen2Summarizer", 
+    model=model_id, 
     dtype=torch.bfloat16,                       
-    device_map="auto")
+    device_map="auto",
+    clean_up_tokenization_spaces=False
+)
 
 # 2. Define your text
 text = "The Defence Research and Development Organisation (DRDO) is an agency under the Department of Defence Research and Development in the Ministry of Defence of the Government of India, charged with the military's research and development, headquartered in New Delhi, India. "
