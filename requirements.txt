@@ -4,6 +4,7 @@ diffusers>=0.25.0
 ctransformers[cuda]>=0.2.24
 Pillow>=9.3.0
 streamlit>=1.29.0
-accelerate>=0.25.0
+accelerate>=0.26.0
 pypdf
 peft>=0.6.0
+bitsandbytes>=0.46.1
